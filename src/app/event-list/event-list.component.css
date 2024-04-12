@@ -1,0 +1,60 @@
+
+ul {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: white;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* .todo_list li.important::before {
+    content: "!";
+    margin: 0 8px;
+    color: darkred;
+    display: inline-block;
+}
+
+.todo_list li .deadline {
+    background-color: rgb(120, 153, 164);
+    color: white;
+    border-radius: 3px;
+    padding: 2px 4px;
+} */
+
+
+
+ul li {
+    /* padding: 12px;
+    padding-left: 40px; */
+    /* list-style: inside url(materials_hw_module_2/icons/unchecked_16.png); */
+}
+
+ul li:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+ul>li:nth-child(even) {
+    background-color: rgb(174, 216, 229);
+}
+
+ul>li:nth-child(odd) {
+    background-color: rgb(51, 138, 168);
+}
+
+
+/* .todo_list li.done {
+    background-color: rgb(226, 226, 226);
+    list-style: inside url(materials_hw_module_2/icons/checked_16.png);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}  */

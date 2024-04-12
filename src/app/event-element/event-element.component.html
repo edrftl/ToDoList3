@@ -1,0 +1,9 @@
+<li [attr.class]="event.classes.join(' ')" (click)="onClick()" style="position: relative;">
+    {{event.text}}
+    @if (event.date!=null) {
+        <span class="deadline">{{event.date.getDate()}}:{{event.date.getMonth()+1}}:{{event.date.getFullYear()}}</span>
+    }
+    <button class="deleteBtn" (click)="onDelete()" style="position: absolute; right: 10px;">
+        <i class="fa-solid fa-trash-can"></i>
+    </button>
+</li>
