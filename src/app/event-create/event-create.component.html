@@ -1,0 +1,12 @@
+<h2>Create New Event</h2>
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <label>
+        <span>Name: </span>
+        <input type="text" formControlName="text">
+    </label>
+    
+    <div class="col-2">
+        <button type="reset">Cancel</button>
+        <button type="submit">Create</button>
+    </div>
+</form>
