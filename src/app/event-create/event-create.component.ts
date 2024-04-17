@@ -15,20 +15,28 @@ export class EventCreateComponent {
   // form group
   createForm = this.fb.group({
     text: ['', Validators.required],
+    date: [new Date().toISOString().split('T')[0]],
+    important: [false],
   });
 
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
-    if (!this.createForm.valid) {
-      alert('Invalid data!');
-      return;
-    }
+    const formValue = this.createForm.value;
 
-    const event = this.createForm.value as IEvent;
+    // Convert formValue.date to Date if it exists, otherwise use current date
+    const dateValue = formValue.date ? new Date(formValue.date) : new Date();
+
+    const event: IEvent = {
+      id: 0,
+      text: formValue.text as string,
+      date: dateValue, // use converted date value
+      classes: [], // add 'important' class if true
+    };
+    if (formValue.important == true) event.classes.push('important');
+
     console.log(event);
 
-    // send user to parent component
     this.createEvent.emit(event);
   }
 }

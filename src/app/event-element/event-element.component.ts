@@ -6,26 +6,25 @@ import { IEvent } from '../event';
   standalone: true,
   imports: [],
   templateUrl: './event-element.component.html',
-  styleUrl: './event-element.component.css'
+  styleUrl: './event-element.component.css',
 })
 export class EventElementComponent {
-
   @Output() deleteEvent = new EventEmitter<number>();
 
   @Input()
   event: IEvent = {
     id: 0,
-    text: "",
+    text: '',
     classes: [],
-    date: null
-  }
+    date: null,
+  };
 
   onClick() {
-    const index = this.event.classes.indexOf("done");
+    const index = this.event.classes.indexOf('done');
     if (index !== -1) {
       this.event.classes.splice(index, 1);
     } else {
-      this.event.classes.push("done");
+      this.event.classes.push('done');
     }
   }
 

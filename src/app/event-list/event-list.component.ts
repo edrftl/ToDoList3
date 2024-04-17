@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EventElementComponent } from '../event-element/event-element.component';
+
 import { IEvent } from '../event';
 import { EVENTS } from '../event-mock';
 import { EventCreateComponent } from '../event-create/event-create.component';
@@ -41,11 +42,7 @@ export class EventListComponent {
   }
 
   createEvent(event: IEvent) {
-    event.id = 10;
-    event.date = new Date(2002, 1, 12);
-    event.classes = ['hgwrhe'];
-    console.log(event);
-
+    event.id = this.events.length + 1;
     this.events.push(event);
   }
 }

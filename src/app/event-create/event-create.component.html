@@ -1,8 +1,16 @@
 <h2>Create New Event</h2>
 <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
     <label>
-        <span>Name: </span>
+        <span>Text: </span>
         <input type="text" formControlName="text">
+    </label>
+    <label>
+        <span>Important: </span>
+        <input type="checkbox" formControlName="important">
+    </label>
+    <label>
+        <span>Date: </span>
+        <input type="date" formControlName="date">
     </label>
     
     <div class="col-2">

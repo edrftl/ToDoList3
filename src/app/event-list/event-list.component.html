@@ -17,7 +17,7 @@
   </div>
 </nav>
 
-
+<app-event-create (createEvent)="createEvent($event)"></app-event-create>
 <ul>
   @if(!events || events.length == 0) {
     <p>User list is empty!</p>
