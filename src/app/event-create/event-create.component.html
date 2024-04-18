@@ -1,20 +1,17 @@
-<h2>Create New Event</h2>
 <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
-    <label>
-        <span>Text: </span>
-        <input type="text" formControlName="text">
-    </label>
-    <label>
-        <span>Important: </span>
-        <input type="checkbox" formControlName="important">
-    </label>
-    <label>
-        <span>Date: </span>
-        <input type="date" formControlName="date">
-    </label>
-    
-    <div class="col-2">
-        <button type="reset">Cancel</button>
-        <button type="submit">Create</button>
+    <div class="mb-3 m-1">
+      <label for="inputText" class="form-label">Text</label>
+      <input type="text" class="form-control" id="inputText" formControlName="text">
     </div>
-</form>
+    <div class="mb-3 m-1">
+        <label for="inputDate" class="form-label">Date</label>
+        <input type="date" class="form-control" id="inputDate" formControlName="date">
+    </div>
+
+    <div class="mb-3 form-check m-1">
+      <input type="checkbox" class="form-check-input" id="checkImportant">
+      <label class="form-check-label" for="checkImportant">Important</label>
+    </div>
+        <button type="reset" class="btn btn-primary m-1">Cancel</button>
+        <button type="submit" class="btn btn-primary m-1">Submit</button>
+  </form>
